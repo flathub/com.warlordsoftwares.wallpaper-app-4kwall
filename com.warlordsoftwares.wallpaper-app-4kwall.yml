@@ -25,7 +25,6 @@ finish-args:
   - --talk-name=org.freedesktop.FileManager1
   - --env=QT_ENABLE_HIGHDPI_SCALING=1
   - --env=APP_PLATFORM=FLATPAK
-  - --metadata=X-DConf=migrate-path=/com/warlordsoftwares/wallpaper-app-4kwall/
 
 cleanup:
   - /include
@@ -47,5 +46,5 @@ modules:
     sources:
       - type: archive
         url: https://warlordsoftwares.com/static/app_builds/flatpak/FLATPAK_4KWALL.tar.gz
-        sha256: 3a377ce18675868d27da02dbb8bfbaafe5a9c46ce3489aa89a2004405e3f2185
+        sha256: afb0a3110c5c4bcb49cc07b7f05776b47e75889d3f9177551d5dfe866ed1341e
 
