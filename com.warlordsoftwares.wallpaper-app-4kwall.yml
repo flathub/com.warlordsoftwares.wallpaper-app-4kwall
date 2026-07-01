@@ -1,9 +1,9 @@
 app-id: com.warlordsoftwares.wallpaper-app-4kwall
 runtime: org.kde.Platform
-runtime-version: "5.15-25.08"
+runtime-version: 5.15-25.08
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: "5.15-25.08"
+base-version: 5.15-25.08
 
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
@@ -13,6 +13,8 @@ build-options:
     - BASEAPP_REMOVE_WEBENGINE=1
 
 command: 4kwall.sh
+rename-icon: icon
+rename-desktop-file: wallpaper-app-4kwall.desktop
 
 finish-args:
   - --share=network
@@ -38,13 +40,11 @@ modules:
     build-commands:
       - mkdir -p ${FLATPAK_DEST}/4kwall
       - cp -r * ${FLATPAK_DEST}/4kwall
-      - install -Dm755 ${FLATPAK_DEST}/4kwall/4kwall.sh ${FLATPAK_DEST}/bin/4kwall.sh
-      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/icons/icon.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/com.warlordsoftwares.wallpaper-app-4kwall.png
-      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/applications/wallpaper-app-4kwall.desktop ${FLATPAK_DEST}/share/applications/com.warlordsoftwares.wallpaper-app-4kwall.desktop
-      - desktop-file-edit --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/com.warlordsoftwares.wallpaper-app-4kwall.desktop
-      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/metainfo/com.warlordsoftwares.wallpaper-app-4kwall.metainfo.xml ${FLATPAK_DEST}/share/metainfo/com.warlordsoftwares.wallpaper-app-4kwall.metainfo.xml
+      - install -Dm755 ${FLATPAK_DEST}/4kwall/4kwall.sh -t ${FLATPAK_DEST}/bin/
+      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/icons/icon.png -t ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/
+      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/applications/wallpaper-app-4kwall.desktop -t ${FLATPAK_DEST}/share/applications/
+      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/metainfo/${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/
     sources:
       - type: archive
         url: https://warlordsoftwares.com/static/app_builds/flatpak/FLATPAK_4KWALL.tar.gz
         sha256: 9d02878f4b5605ae65a34a5e5f84f110402ecf3c5520f499743e300f18895d4a
-
