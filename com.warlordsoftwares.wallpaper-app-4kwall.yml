@@ -38,13 +38,13 @@ modules:
     build-commands:
       - mkdir -p ${FLATPAK_DEST}/4kwall
       - cp -r * ${FLATPAK_DEST}/4kwall
-      - install -Dm755 ${FLATPAK_DEST}/4kwall/4kwall.sh ${FLATPAK_DEST}/bin/4kwall.sh
-      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/icons/icon.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/com.warlordsoftwares.wallpaper-app-4kwall.png
-      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/applications/wallpaper-app-4kwall.desktop ${FLATPAK_DEST}/share/applications/com.warlordsoftwares.wallpaper-app-4kwall.desktop
+      - install -Dm755 ${FLATPAK_DEST}/4kwall/flatpak/4kwall.sh ${FLATPAK_DEST}/bin/4kwall.sh
+      - install -Dm644 ${FLATPAK_DEST}/4kwall/flatpak/share/icons/icon.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/com.warlordsoftwares.wallpaper-app-4kwall.png
+      - install -Dm644 ${FLATPAK_DEST}/4kwall/flatpak/share/applications/wallpaper-app-4kwall.desktop ${FLATPAK_DEST}/share/applications/com.warlordsoftwares.wallpaper-app-4kwall.desktop
       - desktop-file-edit --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/com.warlordsoftwares.wallpaper-app-4kwall.desktop
-      - install -Dm644 ${FLATPAK_DEST}/4kwall/share/metainfo/com.warlordsoftwares.wallpaper-app-4kwall.metainfo.xml ${FLATPAK_DEST}/share/metainfo/com.warlordsoftwares.wallpaper-app-4kwall.metainfo.xml
+      - install -Dm644 ${FLATPAK_DEST}/4kwall/flatpak/share/metainfo/com.warlordsoftwares.wallpaper-app-4kwall.metainfo.xml ${FLATPAK_DEST}/share/metainfo/com.warlordsoftwares.wallpaper-app-4kwall.metainfo.xml
     sources:
       - type: archive
         url: https://warlordsoftwares.com/static/app_builds/flatpak/FLATPAK_4KWALL.tar.gz
-        sha256: 9d02878f4b5605ae65a34a5e5f84f110402ecf3c5520f499743e300f18895d4a
+        sha256: 7a9a245a4f63080d6253068b528412fd2d1f356537e625d57a8882f96d257c88
 
