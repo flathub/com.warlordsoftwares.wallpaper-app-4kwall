@@ -46,6 +46,6 @@ modules:
     sources:
       - type: archive
         url: https://warlordsoftwares.com/static/app_builds/flatpak/FLATPAK_4KWALL.tar.gz
-        sha256: 5f4ce028e3db79ad1cc2707fa6060f8097c35a23bbb756f2fb67e478326b7ff8
+        sha256: e3592744a32b3a4429817c21f3ea8bc74bc64ef3828e688c0a7a7c0ee8e2be0b
 
 
